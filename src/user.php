@@ -3,7 +3,8 @@
 ?>
 <?php 
  class User{
-    function __construct(){
+     protected static $db_table = "users";
+        function __construct(){
         global $database;
             
 

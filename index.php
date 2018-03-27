@@ -1,4 +1,4 @@
-<h1> 2tituki </h1>
+<h1> 2tuki </h1>
 develop test
 <form action="src/Question.php">
   First name: <input type="text" name="url"><br>

@@ -3,6 +3,7 @@
     require_once("question.php");
     require_once("user.php");
     require_once("base_config.php");
+    require_once("session.php");
 
 
 ?>

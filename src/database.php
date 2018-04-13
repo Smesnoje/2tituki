@@ -23,7 +23,13 @@ class Database {
             }
         }
 		
-
+        public function query($sql){
+            //    $result = mysqli_query($this->connection, $sql); ->outdated
+               $result = $this->connection->query($sql);
+             
+        
+            return $result;
+           }
 		
 
 	

@@ -10,14 +10,16 @@
         function __construct(){
   
         global $database;
-        $sql = 'SELECT * FROM users WHERE id=3';
-        
-        $users = Database::find_by_query($sql);
-        var_dump($users);
+        $sql = "INSERT INTO " . static::$db_table . "(url)";
+		$sql .= "VALUES ('". $_GET['url']."')";
+        $kurac = $database->query($sql);
+        var_dump($kurac);
+       
     }
+
     
    
-
+   
 
 
 

@@ -22,6 +22,13 @@ class Database {
 
             }
         }
+
+        public function insert($tabel,$rows,$values){
+            $sql = "INSERT INTO " . $tabel . " (".$rows.")";
+            $sql .= "VALUES ('". $values ."')";
+
+            return $sql;
+        }
 		
         public function query($sql){
             //    $result = mysqli_query($this->connection, $sql); ->outdated

@@ -13,15 +13,17 @@ class Database {
     }
 
     
-    public static function find_by_query($sql) {
-		global $database;
-        $result = $database->connection->query($sql);
-            foreach($result->fetch_assoc() as $row){
-                echo ($row);
-                
-
-            }
-        }
+    public static function duplicate($url){
+        global $database;
+        $sql = "SELECT * FROM users WHERE url like '";
+        $sql .= $url;
+        $sql .= "'";
+        $result = $database->do_query($sql);
+        $row = $result->fetch_assoc(); 
+        return ($row['url']);
+        
+        
+    }
 
         public function insert($tabel,$rows,$values){
             $sql = "INSERT INTO " . $tabel . " (".$rows.")";
@@ -30,7 +32,7 @@ class Database {
             return $sql;
         }
 		
-        public function query($sql){
+        public function do_query($sql){
             //    $result = mysqli_query($this->connection, $sql); ->outdated
                $result = $this->connection->query($sql);
              

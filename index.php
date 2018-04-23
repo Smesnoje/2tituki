@@ -13,7 +13,7 @@ if (isset($_GET['msg'])){
 ?>
 
 <form action="src/user.php">
-  Facebook url: <input type="text" name="url"><br>
+  Username: <input type="text" name="url"><br>
   <input type="submit" value="Submit">
 </form>
 
